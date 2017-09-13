@@ -1,0 +1,149 @@
+CREATE SCHEMA IF NOT EXISTS `locadora` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+
+USE `locadora` ;
+
+
+
+-- -----------------------------------------------------
+
+-- Table `locadora`.`Filme`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `locadora`.`Filme` (
+
+  `ID` INT NOT NULL ,
+
+  `Titulo` VARCHAR(255) NOT NULL ,
+
+  `Genero` VARCHAR(45) NOT NULL ,
+
+  `Classificacao` VARCHAR(255) NOT NULL ,
+
+  `Diretor` VARCHAR(255) NULL ,
+
+  `Data_Lancamento` DATE NOT NULL ,
+
+  `Tipo` VARCHAR(255) NOT NULL ,
+
+  `Quantidade` INT NOT NULL ,
+
+  PRIMARY KEY (`ID`) )
+
+ENGINE = InnoDB;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `locadora`.`Funcionario`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `locadora`.`Funcionario` (
+
+  `ID` INT NOT NULL ,
+
+  `Nome` VARCHAR(255) NOT NULL ,
+
+  `Telefone` VARCHAR(20) NOT NULL ,
+
+  `RG` VARCHAR(12) NOT NULL ,
+
+  PRIMARY KEY (`ID`) )
+
+ENGINE = InnoDB;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `locadora`.`Cliente`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `locadora`.`Cliente` (
+
+  `ID` INT NOT NULL ,
+
+  `Nome` VARCHAR(255) NOT NULL ,
+
+  `Telefone` VARCHAR(20) NOT NULL ,
+
+  `Endereco` VARCHAR(255) NOT NULL ,
+
+  `RG` VARCHAR(12) NOT NULL ,
+
+  PRIMARY KEY (`ID`) )
+
+ENGINE = InnoDB;
+
+
+
+
+
+-- -----------------------------------------------------
+
+-- Table `locadora`.`Aluguel`
+
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `locadora`.`Aluguel` (
+
+  `Filme_ID` INT NOT NULL ,
+
+  `Cliente_ID` INT NOT NULL ,
+
+  `Funcionario_ID` INT NOT NULL ,
+
+  `Valor` FLOAT NOT NULL ,
+
+  `Data_devolucao` DATE NOT NULL ,
+
+  PRIMARY KEY (`Filme_ID`, `Cliente_ID`, `Funcionario_ID`) ,
+
+  INDEX `fk_Filme_has_Cliente_Cliente1_idx` (`Cliente_ID` ASC) ,
+
+  INDEX `fk_Filme_has_Cliente_Filme_idx` (`Filme_ID` ASC) ,
+
+  INDEX `fk_Filme_has_Cliente_Funcionario1_idx` (`Funcionario_ID` ASC) ,
+
+  CONSTRAINT `fk_Filme_has_Cliente_Filme`
+
+    FOREIGN KEY (`Filme_ID` )
+
+    REFERENCES `locadora`.`Filme` (`ID` )
+
+    ON DELETE NO ACTION
+
+    ON UPDATE NO ACTION,
+
+  CONSTRAINT `fk_Filme_has_Cliente_Cliente1`
+
+    FOREIGN KEY (`Cliente_ID` )
+
+    REFERENCES `locadora`.`Cliente` (`ID` )
+
+    ON DELETE NO ACTION
+
+    ON UPDATE NO ACTION,
+
+  CONSTRAINT `fk_Filme_has_Cliente_Funcionario1`
+
+    FOREIGN KEY (`Funcionario_ID` )
+
+    REFERENCES `locadora`.`Funcionario` (`ID` )
+
+    ON DELETE NO ACTION
+
+    ON UPDATE NO ACTION)
+
+ENGINE = InnoDB;
+
+
+
+USE `locadora` ;
