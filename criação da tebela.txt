@@ -15,7 +15,8 @@ CREATE TABLE `aluguel` (
   KEY `fk_Aluguel_Funcionario1_idx` (`Funcionario_ID`),
   CONSTRAINT `fk_Aluguel_Funcionario1` FOREIGN KEY (`Funcionario_ID`) REFERENCES `funcionario` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Filme_has_Cliente_Cliente1` FOREIGN KEY (`Cliente_ID`) REFERENCES `cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Filme_has_Cliente_Filme` FOREIGN KEY (`Filme_ID`) REFERENCES `filme` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION );
+  CONSTRAINT `fk_Filme_has_Cliente_Filme` FOREIGN KEY (`Filme_ID`) REFERENCES `filme` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION 
+  );
 
 
 CREATE TABLE `cliente` (
