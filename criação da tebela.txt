@@ -1,4 +1,4 @@
-CREATE DATABASE Locadora
+CREATE DATABASE Locadora;
 use Locadora;
 
 CREATE TABLE `aluguel` (
