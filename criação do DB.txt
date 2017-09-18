@@ -27,6 +27,8 @@ CREATE  TABLE IF NOT EXISTS `locadora`.`Filme` (
   `Tipo` VARCHAR(255) NOT NULL ,
 
   `Quantidade` INT NOT NULL ,
+  
+  'Alugados' INT NOT NULL ,
 
   PRIMARY KEY (`ID`) )
 
@@ -94,6 +96,8 @@ ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS `locadora`.`Aluguel` (
 
+  `ID_aluguel` INT NOT NULL ,
+   
   `Filme_ID` INT NOT NULL ,
 
   `Cliente_ID` INT NOT NULL ,
@@ -103,8 +107,10 @@ CREATE  TABLE IF NOT EXISTS `locadora`.`Aluguel` (
   `Valor` FLOAT NOT NULL ,
 
   `Data_devolucao` DATE NOT NULL ,
+  
+  `Dias_alugados` INT NOT NULL ,
 
-  PRIMARY KEY (`Filme_ID`, `Cliente_ID`, `Funcionario_ID`) ,
+  PRIMARY KEY (`ID_aluguel`, `Filme_ID`, `Cliente_ID`, `Funcionario_ID`) ,
 
   INDEX `fk_Filme_has_Cliente_Cliente1_idx` (`Cliente_ID` ASC) ,
 
