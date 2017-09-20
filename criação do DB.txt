@@ -28,7 +28,7 @@ CREATE  TABLE IF NOT EXISTS `locadora`.`Filme` (
 
   `Quantidade` INT NOT NULL ,
   
-  'Alugados' INT NOT NULL ,
+  `Alugados` INT NOT NULL ,
 
   PRIMARY KEY (`ID`) )
 
