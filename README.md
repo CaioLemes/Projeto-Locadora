@@ -13,10 +13,10 @@ QUESTÕES
 
 4-) Listar os filmes de comédia menos alugados;
 
-5-) Listar as classificações por ordem alfabética e de lançamento;
+5-) Listar os catálogos por ordem alfabética e de lançamento;
 
 6-) Quantos filmes os clientes de ID: 2, 30 e 50 já alugaram até hoje;
 
 7-) Organize em ordem decrescente os filmes mais alugados pelo cliente 7;
 
-8-) Qual foram os clientes que mais alugaram o filme “I Am Micheal”;
+8-) Quais foram os clientes que mais alugaram o filme “I Am Micheal”;
