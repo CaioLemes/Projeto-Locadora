@@ -11,7 +11,7 @@ QUESTÕES
 
 3-) Houve uma promoção na data de 04/06/2016, onde todos os filmes alugados sofrem uma redução de R$1,00. E por um erro no banco de dados esta mudança não foi realizada. Mostre todos os filmes alugados nesta data já com a alteração no seu preço efetuada.
 
-4-) Listar os 6 últimos filmes de comédia mais alugados;
+4-) Listar os filmes de comédia menos alugados;
 
 5-) Listar as classificações por ordem alfabética e de lançamento;
 
