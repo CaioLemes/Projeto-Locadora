@@ -17,6 +17,6 @@ QUESTÕES
 
 6-) Quantos filmes os clientes de ID: 2, 30 e 50 já alugaram até hoje;
 
-7-) Organize em ordem decrescente os filmes mais alugados pelo cliente 7;
+7-) Mostre os filmes mais alugados pelo cliente 7;
 
 8-) Quais foram os clientes que mais alugaram o filme “I Am Micheal”;
