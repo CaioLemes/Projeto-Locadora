@@ -13,7 +13,7 @@ QUESTÕES
 
 4-) Listar os filmes de comédia menos alugados;
 
-5-) Listar os catálogos por ordem alfabética e de lançamento;
+5-) Listar os catálogos por ordem de lançamento;
 
 6-) Quantos filmes os clientes de ID: 2, 30 e 50 já alugaram até hoje;
 
